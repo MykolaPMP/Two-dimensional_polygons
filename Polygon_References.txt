@@ -1,0 +1,155 @@
+class Point;
+Functions:
+
+Point()
+Creates new point with default values
+
+Point(const Point& _point)
+Creates new point with values from _point
+Parameters: _point - base-point
+
+Point(double _x, double _y) 
+Creates new point with correspounding values
+Parameters: _x, _y - coorditanes
+
+double get_x()const
+Returns the value of x
+Parameters: none
+return value: coordinate of x
+
+double get_y()const
+Returns the value of y
+Parameters: none
+return value: coordinate of y
+
+void set_x(double _x)
+Changes the value of x with _x
+Parameters: _x - new x coordinate
+return value: none
+
+void set_y(double _y)
+Changes the value of y with _y
+Parameters: _y - new y coordinate
+return value: none
+
+void print()
+Prints the values of x and y, if the point is not empty
+Parameters: none
+return value: none
+
+Point& operator=(const Point& object)
+Replaces values with a copy of the object
+Parameters: object - point we want our new coordinates from
+return value: this changed point
+
+Point& operator+=(const Point& delta)
+Adds to this values delta's values
+Parameters: delta - second operand
+return value: this point, with changed values
+
+Point& operator-=(const Point& delta)
+Subtracts this values with delta's values
+Parameters: delta - second operand
+return value: this point, with changed values
+
+Point operator+(const Point& delta)
+Returns new point with added values
+Parameters: delta - second operand
+return value: new point, with changed values
+
+Point operator-(const Point& delta)
+Returns new point with subtracted values
+Parameters: delta - second operand
+return value: new point, with changed values
+
+Non-member functions:
+
+Point& operator * (double skalar, Point& delta)
+Returns new point with coordinates multiplayed by skalar
+Parameters: skalar - multiplayer of coordinates
+return value: new point, with changed values
+
+struct Vertex;
+Functions:
+
+void print()
+Prints the point, if the point is not empty
+Parameters: none
+return value: none
+	
+Vertex(Point _point)
+Creates new vertex with point being _point
+Parameters: _point - point our vertex is based on
+	
+Point& get_point()
+Returns the reference of the point
+Parameters: none
+return value: the reference of the point		
+
+class Polygon;
+Functions:
+
+Polygon() 
+Creates an empty list of verxes
+
+Polygon(const Polygon& _Polygon) 
+Creates a new polygond with copied vertexes
+Parameters: _Polygon - polygon we want to copy
+
+~Polygon() 
+Frees the memory
+
+void  push_end(Point& _point)
+Adds new vertex with _point at the end of the polygon, creates a link with previous vertex and with the first
+Parameters: _point - new point we want to add
+return value: none
+
+void  push_begin(Point& _point)
+Adds new vertex with _point at the beginning of the polygon, creates a link with next vertex and with the last
+Parameters: _point - new point we want to add
+return value: none
+
+void  pop_begin()
+Removes the first vertex of the polygon
+Parameters: none
+return value: none
+
+void  pop_end()
+Removes the last vertex of the polygon
+Parameters: none
+return value: none
+
+void clear()
+Removes all elements from the container
+Parameters: none
+return value: none
+
+void  print()const 
+Prints all vertexes clockwise, if the polygon is not empty
+Parameters: none
+return value: none
+
+Polygon& operator = (const Polygon& object)
+Replaces values with a copy of the vertexes from object
+Parameters: object - polygon we want to copy
+return value: this copied polygon
+
+Polygon& operator +=(const Point& delta)
+Adds to values of the all points of the polygon delta's values, moves
+Parameters: delta - how me want to move
+return value: this moved polygon
+
+Polygon& operator *= (double index)
+Resize the polygon relative to the center of mass, if the 0<index<1 the polygon will get smaller, if the index>1 the polygon will get bigger, if index = 1 - will not be changed
+Parameters: index - multiplayer of the distances beetwen the center and other vertexes
+return value: this resized polygon
+
+Polygon operator +(const Point& object)
+Return new polygon with all points moved
+Parameters: delta - how me want to move
+return value: new moved polygon
+
+Polygon operator * (double index)
+Return new resized polygon
+Parameters: index - multiplayer of the distances beetwen the center and other vertexes
+return value: new resized polygon

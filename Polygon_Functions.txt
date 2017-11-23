@@ -1,0 +1,87 @@
+std::O::Point
+Defined in header <O>
+class Point;
+std::O::Point contains coordinates of point, x stands for x-asix and y for y-axis, both parameters are of double type
+
+Functions:
+
+Point() default constructor
+
+Point(const Point& _point) copy constructor
+
+Point(double _x, double _y) double constructor
+
+get_x() returns an x value
+
+get_y() returns a y value
+
+set_x() assigns value to the x
+
+set_y() assigns value to the y
+
+print() prints the values 
+
+operator=() assigns values to the point
+
+operator+=() changes values of the point
+
+operator-=() changes values of the point
+
+operator+() returns new point with changed values
+
+operator-() returns new point with changed values
+
+Non-member functions:
+operator *() returns point with multiplayed values
+
+
+std::O::Vertex
+Defined in header <O>
+struct Vertex;
+std::O::Vertex contains a point and references to the next and previous vertexes
+
+Functions:
+
+print() prints the values of the point
+
+Vertex() point-based constructor
+
+get_point() returns the point
+
+
+std::O::Polygon
+Defined in header <O>
+class Polygon;
+std::O::Polygon is a container of the double-linked list type, contains vertexes with points, vertexes must be listed clockwise,
+head is the first vertex and tail is the last vertex
+
+Functions:
+
+Polygon() default constructor
+
+Polygon(const Polygon& _Polygon) copy constructor
+
+~Polygon() destructor
+
+push_end() adds an element to the end 
+
+push_begin() adds an element to the beginning
+
+pop_begin() removes the first element
+
+pop_end()  removes the last element
+
+clear() clears the contents 
+
+print() prints coordinates of all vertexes clockwise, from the first element to the last
+
+operator=() assigns values to the polygon
+
+operator+=() moves polygon
+
+operator*=() scales polygon
+
+operator+() returns new moved polygon
+
+operator*() returns new scaled polygon
+
