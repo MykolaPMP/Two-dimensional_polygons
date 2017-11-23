@@ -17,11 +17,11 @@ Using our product, user is able to:
 
 ## Functions
 
-For further information click here.
+For further information click <a href="https://github.com/MykolaPMP/Two-dimensional_polygons/blob/master/Polygon_Functions.txt">here.</a>
 
 ## **References**
 
-For further information click here.
+For further information click <a href="https://github.com/MykolaPMP/Two-dimensional_polygons/blob/master/Polygon_References.txt">here.</a>
 
 
 ## **Contributors**
