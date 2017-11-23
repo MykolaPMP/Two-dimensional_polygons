@@ -1,4 +1,4 @@
-Polygons and shit
+Polygons
 =============================
 #### The easiest product to use among all you could have seen today since there is no need of installing any additional software or reading all these complicated READMEs, especially this one. No special hardware requirements or dependencies.
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -17,6 +17,11 @@ Using our product, user is able to:
 
 ## Documentation
 
+For further information click here.
+
+## **References**
+
+For further information click here.
 
 
 ## **Contributors**
