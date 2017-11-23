@@ -24,7 +24,28 @@ namespace O
 		static O_API double AddMultiply(double a, double b);
 	};
 
+struct Vertex
+	{
+		Point point;
+		Vertex *next;
+		Vertex *previous;
+		void print()
+		{
+			point.print();
+		}
+		Vertex(Point _point)
+		{
+			point.set_x(_point.get_x());
+			point.set_y(_point.get_y());
 
+			next = NULL;
+			previous = NULL;
+		}
+		Point& get_point()
+		{
+			return point;
+		}
+	};
 
 
 
