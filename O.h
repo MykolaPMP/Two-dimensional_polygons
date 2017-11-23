@@ -23,8 +23,26 @@ namespace O
 		// Returns a + (a * b)  
 		static O_API double AddMultiply(double a, double b);
 	};
+	
+class Point { protected:  double x;  double y; public:
+  Point()  {   x = INT_MIN;   y = INT_MIN;  }
+  Point(const Point& _point)  {   x = _point.x;   y = _point.y;  }
+  Point(double _x, double _y) :x(_x), y(_y)  {
+  }
+  double get_x()const  {   return x;  }
+  double get_y()const  {   return y;  }
+  void set_x(double _x)  {   x = _x;  }
+  void set_y(double _y)  {   y = _y;  }
+  Point& operator=(const Point& object)  {   x = object.x;   y = object.y;   return *this;  }
+  Point& operator+=(const Point& delta)  {   x += delta.x;   y += delta.y;   return *this;  }
+  Point operator+(const Point& delta)  {   Point result(x, y);   result += delta;   return result;;  }
+  Point& operator-=(const Point& delta)  {   x -= delta.x;   y -= delta.y;   return *this;  }
+  Point operator-(const Point& delta)  {   Point result(x, y);   result -= delta;   return result;  }    friend Point& operator * (double skalar, Point& delta)  {   delta.x *= skalar;   delta.y *= skalar;   return delta;  }
+  ~Point()  {
+  }
+  void print()  {   if (x != INT_MIN && y != INT_MIN)   {    cout << '(' << x << "," << y << ") ";   }   else   {    cout << "NULL" << endl;   }  } };
 
-struct Vertex
+	struct Vertex
 	{
 		Point point;
 		Vertex *next;
